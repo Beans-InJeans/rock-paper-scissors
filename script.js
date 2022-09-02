@@ -1,5 +1,7 @@
 // Rock Paper Scissors
 
+game();
+
 /**
  * randomly returns rock, paper, or scissors for the computer's turn.
  * @return {string} computerChoice
@@ -66,21 +68,38 @@ function playRound(playerSelection, computerSelection) {
         alert("ERROR: You need to input rock, paper, or scissors!")
     }
 
-    return { playerScore, computerScore }
 }
-
-const playerSelection = prompt("rock, paper, or scissors?").toLowerCase();
-const computerSelection = getComputerChoice();
-game();
-// console.log(playRound(playerSelection, computerSelection));
 
 /**
  * plays a 5 round game that keeps score and reports the winner/loser at the end.
  */
 function game() {
 
+    let playerScore = 0;
+    let computerScore = 0;
+
     for (let i = 0; i < 5; i++) {
-       console.log(playRound(playerSelection, computerSelection));
-       
+        let playerSelection = prompt("rock, paper, or scissors?").toLowerCase();
+        let computerSelection = getComputerChoice();
+        let result = playRound(playerSelection, computerSelection);
+        if (result === 0) {
+            alert("Tie!");
+        } else if (result === 1) {
+            playerScore++
+            alert("You win the round!")
+        } else {
+            computerScore++
+            alert("The computer wins the round.")
+        }
+    }
+
+    alert("Your score: " + playerScore + "\nComputer score: " + computerScore);
+
+    if (playerScore === computerScore) {
+        alert("Tie game.")
+    } else if (playerScore > computerScore) {
+        alert("You won the game!")
+    } else {
+        alert("You lost the game!")
     }
 }
