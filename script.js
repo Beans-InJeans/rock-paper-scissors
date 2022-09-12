@@ -1,6 +1,6 @@
 // Rock Paper Scissors
 
-game();
+playGame();
 
 /**
  * randomly returns rock, paper, or scissors for the computer's turn.
@@ -73,7 +73,7 @@ function playRound(playerSelection, computerSelection) {
 /**
  * plays a 5 round game that keeps score and reports the winner/loser at the end.
  */
-function game() {
+function playGame() {
 
     let playerScore = 0;
     let computerScore = 0;
