@@ -1,25 +1,39 @@
 html, body {
     height: 100vh;
+    background-color: white;
+}
+
+* {
     margin: 0;
     padding: 0;
 }
 
 body {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-.buttons {
+.playerImgs {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
 }
 
-.selection {
-    width: 10rem;
-    height: 3rem;
-    font-size: 16px;
-    background-color: plum;
+img {
+    max-width: 10rem;
+    height: auto;
+}
+
+.pImg:hover {
+    cursor: pointer;
+}
+
+.reset {
+    display: none;
+}
+
+.reset:hover {
+    cursor: pointer;
 }
