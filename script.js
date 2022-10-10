@@ -1,9 +1,6 @@
 const choices = ["rock", "paper", "scissors"];
 let winners = [];
 
-<<<<<<< HEAD
-playGame();
-=======
 function resetGame() {
     winners = [];
     document.querySelector('.playerScore').textContent = 'Score: 0';
@@ -14,7 +11,6 @@ function resetGame() {
     document.querySelector('.computerChoice').textContent = '';
     document.querySelector('.reset').style.display = "none";
 }
->>>>>>> rps-ui
 
 function startGame() {
     // play until someone wins 5 times
@@ -60,16 +56,9 @@ function displayEnd() {
     document.querySelector('.reset').style.display = "flex";
 }
 
-<<<<<<< HEAD
-/**
- * plays a 5 round game that keeps score and reports the winner/loser at the end.
- */
-function playGame() {
-=======
 function displayRound(playerChoice, computerChoice, winner) {
     document.querySelector('.playerChoice').textContent = `You chose: 
     ${playerChoice.charAt(0).toUpperCase() + playerChoice.slice(1)}`;
->>>>>>> rps-ui
 
     document.querySelector('.computerChoice').textContent = `The computer chose: 
     ${computerChoice.charAt(0).toUpperCase() + computerChoice.slice(1)}`;
