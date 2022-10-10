@@ -1,0 +1,25 @@
+html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.selection {
+    width: 10rem;
+    height: 3rem;
+    font-size: 16px;
+    background-color: plum;
+}
